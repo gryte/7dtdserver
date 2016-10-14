@@ -42,4 +42,4 @@ Adam Linkous – [@gryte_meowmix](https://twitter.com/gryte_meowmix) – alinkou
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
-[https://github.com/gryte/delugeserver](https://github.com/gryte/delugeserver)
+[https://github.com/gryte/7dtdserver](https://github.com/gryte/7dtdserver)
