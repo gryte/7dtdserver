@@ -66,6 +66,6 @@ end
 
 # chown steamcmd contents within install directory
 execute 'chown_steamcmd' do
-  command 'chown -R 7days:7days /home/7days/steamcmd/*.*'
+  command 'chown -R 7days:7days /home/7days/steamcmd'
   action :nothing
 end
