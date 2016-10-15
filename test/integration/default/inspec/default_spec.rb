@@ -54,4 +54,6 @@ end
 # steamcmd opened package exists
 describe file('/home/7days/steamcmd/steamcmd.sh') do
   it { should be_file }
+  it { should be_owned_by '7days' }
+  it { should be_grouped_into '7days' }
 end
