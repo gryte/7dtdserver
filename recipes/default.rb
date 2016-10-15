@@ -61,4 +61,11 @@ end
 execute 'untar_steamcmd' do
   command 'tar xzf /.downloads/steamcmd_linux.tar.gz -C /home/7days/steamcmd'
   not_if { ::File.exist?('/home/7days/steamcmd/steamcmd.sh') }
+  notifies :run, 'execute[chown_steamcmd]'
+end
+
+# chown steamcmd contents within install directory
+execute 'chown_steamcmd' do
+  command 'chown -R 7days:7days /home/7days/steamcmd'
+  action :nothing
 end
