@@ -49,10 +49,26 @@ end
 # steamcmd directory exists
 describe directory('/home/7days/steamcmd') do
   it { should be_directory }
+  it { should be_owned_by '7days' }
+  it { should be_grouped_into '7days' }
 end
 
 # steamcmd opened package exists
 describe file('/home/7days/steamcmd/steamcmd.sh') do
+  it { should be_file }
+  it { should be_owned_by '7days' }
+  it { should be_grouped_into '7days' }
+end
+
+# 7daysded directory exists
+describe directory('/home/7days/steamcmd/7daysded') do
+  it { should be_directory }
+  it { should be_owned_by '7days' }
+  it { should be_grouped_into '7days' }
+end
+
+# startserver.sh script exists
+describe file('/home/7days/steamcmd/7daysded/startserver.sh') do
   it { should be_file }
   it { should be_owned_by '7days' }
   it { should be_grouped_into '7days' }
