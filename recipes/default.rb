@@ -67,3 +67,11 @@ unless ::File.exist?('/home/7days/steamcmd/steamcmd.sh')
 
   include_recipe '7dtdserver::install_7daysded'
 end
+
+template 'manage_serverconfig' do
+  action :create
+  path '/home/7days/steamcmd/7daysded/serverconfig.xml'
+  source 'serverconfig.xml.erb'
+  owner '7days'
+  group '7days'
+end
