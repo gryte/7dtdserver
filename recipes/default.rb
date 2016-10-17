@@ -75,3 +75,12 @@ template 'manage_serverconfig' do
   owner '7days'
   group '7days'
 end
+
+unless node['7dtdserver']['vagrant']
+  execute 'start_server' do
+    user '7days'
+    group '7days'
+    command 'screen -dmS 7daysded /home/7days/steamcmd/7daysded/startserver.sh -configfile=serverconfig.xml'
+    not_if 'ps cax | grep startserver.sh'
+  end
+end
