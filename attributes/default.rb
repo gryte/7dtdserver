@@ -41,11 +41,3 @@ default['7dtdserver']['serversettings']['controlpanelport'] = '8080'
 # Enable/Disable the telnet
 # Default is false
 default['7dtdserver']['serversettings']['telnetenabled'] = 'false'
-
-#
-#    manage test flag
-#
-
-# Prevent startserver.sh from running in kitchen vagrant run
-# Defaul is false
-default['7dtdserver']['vagrant'] = false
