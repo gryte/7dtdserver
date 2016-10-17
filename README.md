@@ -27,6 +27,8 @@ kitchen test
 
 ## Release History
 
+* 1.0.0
+    * first release
 * 0.1.0
     * first commit
 
