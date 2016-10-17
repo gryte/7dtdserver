@@ -73,3 +73,12 @@ describe file('/home/7days/steamcmd/7daysded/startserver.sh') do
   it { should be_owned_by '7days' }
   it { should be_grouped_into '7days' }
 end
+
+# serverconfig.xml file exists
+describe file('/home/7days/steamcmd/7daysded/serverconfig.xml') do
+  it { should be_file }
+  it { should be_owned_by '7days' }
+  it { should be_grouped_into '7days' }
+  its('content') { should match '<property name=\"ServerIsPublic\".*value=\"false\"' }
+  its('content') { should match '<property name=\"TelnetEnabled\".*value=\"false\"' }
+end
