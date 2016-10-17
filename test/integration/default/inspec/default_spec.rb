@@ -82,3 +82,9 @@ describe file('/home/7days/steamcmd/7daysded/serverconfig.xml') do
   its('content') { should match '<property name=\"ServerIsPublic\".*value=\"false\"' }
   its('content') { should match '<property name=\"TelnetEnabled\".*value=\"false\"' }
 end
+
+# startserver.sh process is running
+describe processes('startserver.sh') do
+  its('states') { should eq ['Ss+'] }
+  its('users') { should eq ['7days'] }
+end
