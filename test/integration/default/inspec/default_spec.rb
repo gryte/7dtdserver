@@ -88,3 +88,7 @@ describe processes('startserver.sh') do
   its('states') { should eq ['Ss+'] }
   its('users') { should eq ['7days'] }
 end
+
+describe port(26_900) do
+  it { should be_listening }
+end

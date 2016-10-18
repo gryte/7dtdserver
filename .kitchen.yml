@@ -4,8 +4,6 @@ driver:
   customize:
     memory: 4096
     cpus: 2
-#  network:
-#    - ["forwarded_port", {guest: <port>, host: <port>}]
 provisioner:
   name: chef_zero
   client_rb:

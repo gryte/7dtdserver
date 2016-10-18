@@ -69,7 +69,7 @@ unless ::File.exist?('/home/7days/steamcmd/steamcmd.sh')
 end
 
 template 'manage_serverconfig' do
-  action :create
+  action :nothing
   path '/home/7days/steamcmd/7daysded/serverconfig.xml'
   source 'serverconfig.xml.erb'
   owner '7days'
