@@ -4,6 +4,9 @@
 #
 # Copyright (c) 2016 Adam Linkous, All Rights Reserved.
 
+# include chef-vault recicpe
+include_recipe 'chef-vault'
+
 # install wget
 package 'wget' do
   action :install
@@ -75,6 +78,10 @@ template 'manage_serverconfig' do
   owner '7days'
   group '7days'
   sensitive true
+  variables(
+    env: node.chef_environment,
+    serverpassword: ChefVault::Item.load('7dtdserver', 'serverpassword')[@env]['pass']
+  )
 end
 
 execute 'start_server' do
