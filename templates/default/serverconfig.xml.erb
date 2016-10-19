@@ -3,7 +3,7 @@
   <property name="ServerPort"                value="<%= node['7dtdserver']['serversettings']['serverport'].to_s %>"/>  <!-- Port you want the server to listen on. -->
   <property name="ServerIsPublic"            value="<%= node['7dtdserver']['serversettings']['serverispublic'] %>"/>  <!-- Should this server register to master server -->
   <property name="ServerName"                value="<%= node['7dtdserver']['serversettings']['servername'] %>"/>  <!-- Whatever you want the name to be. -->
-  <property name="ServerPassword"            value=""/>                                      <!-- Password to gain entry to the server -->
+  <property name="ServerPassword"            value="test"/>                                      <!-- Password to gain entry to the server -->
   <property name="ServerMaxPlayerCount"      value="<%= node['7dtdserver']['serversettings']['servermaxplayercount'].to_s %>"/>                                     <!-- Maximum Concurrent Players -->
   <property name="ServerDescription"         value="<%= node['7dtdserver']['serversettings']['serverdescription'] %>"/> <!-- Whatever you want the description to be. -->
   <property name="ServerWebsiteURL"          value=""/>                                      <!-- Website URL for the server -->

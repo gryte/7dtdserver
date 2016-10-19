@@ -74,6 +74,7 @@ template 'manage_serverconfig' do
   source 'serverconfig.xml.erb'
   owner '7days'
   group '7days'
+  sensitive true
 end
 
 execute 'start_server' do
