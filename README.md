@@ -26,6 +26,8 @@ kitchen test
 ```
 
 ## Release History
+* 1.0.2
+    * resolve server connection issue
 * 1.0.1
     * resolve server starting issue
 * 1.0.0
