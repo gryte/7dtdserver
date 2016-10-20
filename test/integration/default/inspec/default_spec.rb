@@ -81,6 +81,7 @@ describe file('/home/7days/steamcmd/7daysded/serverconfig.xml') do
   it { should be_grouped_into '7days' }
   its('content') { should match '<property name=\"ServerIsPublic\".*value=\"false\"' }
   its('content') { should match '<property name=\"TelnetEnabled\".*value=\"false\"' }
+  its('content') { should match '<property name=\"ServerPassword\".*value=\"testpw\"' }
 end
 
 # startserver.sh process is running
