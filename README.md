@@ -26,6 +26,8 @@ kitchen test
 ```
 
 ## Release History
+* 1.1.0
+    * add chef vault functionality to manage credentials
 * 1.0.2
     * resolve server connection issue
 * 1.0.1
