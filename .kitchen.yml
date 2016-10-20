@@ -6,6 +6,7 @@ driver:
     cpus: 2
 provisioner:
   name: chef_zero
+  data_bags_path: test/integration/data_bags
   client_rb:
     environments_path: 'test/integration/environments'
     environment: 'test'
