@@ -44,12 +44,12 @@ remote_file 'steamcd_download' do
   source 'http://media.steampowered.com/installer/steamcmd_linux.tar.gz'
 end
 
-# install nux-dextop
+# install glibc.i686
 package 'glibc.i686' do
   action :install
 end
 
-# install nux-dextop
+# install libstdc++.i686
 package 'libstdc++.i686' do
   action :install
 end
@@ -85,8 +85,7 @@ template 'manage_serverconfig' do
 end
 
 execute 'start_server' do
-  user '7days'
-  group '7days'
-  command 'screen -dmS 7daysded /home/7days/steamcmd/7daysded/startserver.sh -configfile=serverconfig.xml'
+  action :run
+  command 'sudo -u 7days screen -dmSU 7daysded /home/7days/steamcmd/7daysded/startserver.sh -configfile=serverconfig.xml'
   not_if 'ps cax | grep startserver.sh'
 end
