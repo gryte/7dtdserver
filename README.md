@@ -26,6 +26,9 @@ kitchen test
 ```
 
 ## Release History
+* 1.2.0
+    * update vault to manage multiple credentials
+    * add ability to manage controlpanel settings
 * 1.1.0
     * add chef vault functionality to manage credentials
 * 1.0.2
