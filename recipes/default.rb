@@ -80,7 +80,7 @@ template 'manage_serverconfig' do
   sensitive true
   variables(
     env: node.chef_environment,
-    serverpassword: chef_vault_item('7dtdserver', 'serverpassword')
+    credentials: chef_vault_item('7dtdserver', 'credentials')
   )
 end
 
