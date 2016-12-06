@@ -1,0 +1,23 @@
+---
+driver:
+  name: proxy
+  host: localhost
+  reset_command: "exit 0"
+provisioner:
+  name: chef_zero
+  data_bags_path: test/integration/data_bags
+  client_rb:
+    environments_path: 'test/integration/environments'
+    environment: 'test'
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-7.2
+
+suites:
+  - name: default
+    run_list:
+      - recipe[7dtdserver::default]
+    attributes:
